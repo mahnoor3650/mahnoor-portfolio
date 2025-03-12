@@ -9,10 +9,11 @@ const Navbar = () => {
   const handleLinkClick = (e, href) => {
     e.preventDefault();
     const targetElement = document.querySelector(href);
+    let offestPosition;;
     if (targetElement) {
       const offset = -85;
       const elePosition = targetElement.getBoundingClientRect().top;
-      const offestPosition = elePosition + window.scrollY + offset;
+       offestPosition = elePosition + window.scrollY + offset;
     }
     window.scrollTo({
       top: offestPosition,
