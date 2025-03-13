@@ -1,14 +1,70 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { PROFILE } from "../constants";
 import { RiArrowRightUpLine } from "@remixicon/react";
+import { gsap } from "gsap";
 import david from "../assets/David.webp";
 const Hero = () => {
   const heroRef = useRef(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        defaults: { ease: "power3.out", duration: 0.6 },
+      });
+      tl.from(".hero-title", {
+        opacity: 0,
+        y: -50,
+        scale: 0.95,
+        duration: 0.8,
+        stagger: 0.15,
+      })
+        .from(
+          ".hero-subheading",
+          {
+            opacity: 0,
+            y: 50,
+            scale: 0.95,
+            duration: 0.8,
+          },
+          "-=0.4"
+        )
+        .from(
+          ".hero-text",
+          {
+            opacity: 0,
+            y: 30,
+
+            duration: 0.8,
+          },
+          "-=0.4"
+        )
+        .from(
+          ".hero-btn",
+          {
+            opacity: 0,
+            scale: 0.9,
+
+            duration: 0.7,
+          },
+          "-=0.3"
+        )
+        .from(
+          ".hero-img",
+          {
+            opacity: 0,
+            y: 100,
+            scale: 0.9,
+            duration: 0.8,
+          },
+          "-=0.5"
+        );
+    }, heroRef);
+    return () => ctx.revert();
+  }, []);
   return (
     <section
       className="flex min-h-screen flex-col items-center justify-center gap-4
     lg:gap-6"
-      rel={heroRef}
+      ref={heroRef}
     >
       <div className="mt-8 lg:mt-20">
         <h1 className="hero-title text-4xl uppercase lg:text-7xl">
@@ -31,7 +87,7 @@ const Hero = () => {
       <a
         href="/Mahnoor-Khalid.pdf"
         target="_blank"
-        rel="noopener norederrer"
+        rel="noopener noreferrer"
         download
         className="hero-btn mb-6 flex gap-1 rounded-full border
       border-pink-200/50 px-3 py-2 tracking-tighter"

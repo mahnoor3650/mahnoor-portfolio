@@ -1,8 +1,28 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { EXPERIENCES } from "../constants";
-
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 const Experience = () => {
   const experienceRef = useRef(null);
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+          gsap.from(".experience-card", {
+            opacity: 0,
+            y: 50,
+
+            duration: 1,
+            ease: "power3.out",
+            stagger: 0.3,
+            scrollTrigger: {
+              trigger: experienceRef.current,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          });
+        }, experienceRef);
+        return () => ctx.revert();
+      }, []);
   return (
     <section className="pt-16 " id="work" ref={experienceRef}>
       <div className="mx-auto max-w-4xl px-4">
@@ -13,7 +33,7 @@ const Experience = () => {
           {EXPERIENCES.map((exp, index) => (
             <div
               key={index}
-              className="flex flex-col
+              className=" experience-card flex flex-col
                     items-start justify-between md:flex-row"
             >
               <div
