@@ -2,7 +2,8 @@ import React from 'react'
 import Navbar from './component/Navbar'
 import Hero from './component/Hero'
 import Project from "./component/Project";
-import Test from './component/Test';
+import Skills from './component/Skills';
+import Experience from './component/Experience';
 
 
 const App = () => {
@@ -14,6 +15,8 @@ const App = () => {
           <Navbar />
           <Hero />
           <Project />
+          <Skills />
+          <Experience />
         </div>
       </div>
     </main>

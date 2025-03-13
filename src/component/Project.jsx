@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { PROJECTS } from "../constants";
 const Project = () => {
   const projectsRef = useRef(null);
- console.log("Projects component rendering");
   return (
     <section className="pt-16 " id="projects" ref={projectsRef}>
       <div className="px-4">
