@@ -8,3 +8,7 @@
 .bg-image{
   background-image: url("./assets/noise.webp");
 }
+.pt-navbar {
+  padding-top: 2rem;
+  /* Adjust to avoid overlap */
+}

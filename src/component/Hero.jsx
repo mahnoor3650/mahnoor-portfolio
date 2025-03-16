@@ -62,7 +62,7 @@ const Hero = () => {
   }, []);
   return (
     <section
-      className="flex min-h-screen flex-col items-center justify-center gap-4
+      className="pt-navbar flex min-h-screen flex-col items-center justify-center gap-4
     lg:gap-6"
       ref={heroRef}
     >
