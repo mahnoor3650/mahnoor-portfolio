@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { PROFILE } from "../constants";
 import { RiArrowRightUpLine } from "@remixicon/react";
 import { gsap } from "gsap";
-import david from "../assets/David.webp";
+import profileImg from "../assets/Mahnoor.png";
 const Hero = () => {
   const heroRef = useRef(null);
   useEffect(() => {
@@ -95,7 +95,7 @@ const Hero = () => {
         <span>download Resume</span> <RiArrowRightUpLine />
       </a>
       <img
-        src={david}
+        src={profileImg}
         alt={PROFILE.name}
         width={400}
         height="400"
