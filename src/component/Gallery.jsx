@@ -5,6 +5,13 @@ import { RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react";
 const Gallery = ({ images, isOpen, onClose, title }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  // Reset image index when gallery is opened or images change
+  useEffect(() => {
+    if (isOpen) {
+      setCurrentImageIndex(0);
+    }
+  }, [isOpen, images]);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
