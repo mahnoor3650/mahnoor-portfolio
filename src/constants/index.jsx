@@ -2,9 +2,41 @@ import movieofinder from "../assets/movieofinder.png";
 import receipemaker from "../assets/receipemaker.png";
 import virtualR from "../assets/virtualR.png";
 import stockspotter from "../assets/stockspotter.png";
-import project5 from "../assets/project5.webp";
 import priscripto from "../assets/priscripto.png";
-import personImage from "../assets/testimonial.webp";
+import pricematchMain from "../assets/pricematch/main.png";
+import pricematchPopup from "../assets/pricematch/popup.png";
+import pricematchCompetitor from "../assets/pricematch/competitor.png";
+import pricematchReview from "../assets/pricematch/review.png";
+import pricematchSettings from "../assets/pricematch/settings.png";
+
+// BokaEnkelt project images
+import bokaEnkeltMain from "../assets/Bookaenkelt/main (1).png";
+import bokaEnkelt2 from "../assets/Bookaenkelt/main (2).png";
+import bokaEnkelt3 from "../assets/Bookaenkelt/main (3).png";
+import bokaEnkelt4 from "../assets/Bookaenkelt/main (4).png";
+import bokaEnkelt5 from "../assets/Bookaenkelt/main (5).png";
+import bokaEnkelt6 from "../assets/Bookaenkelt/main (6).png";
+import bokaEnkelt7 from "../assets/Bookaenkelt/main (7).png";
+import bokaEnkelt8 from "../assets/Bookaenkelt/main (8).png";
+import bokaEnkelt9 from "../assets/Bookaenkelt/main (9).png";
+import bokaEnkelt10 from "../assets/Bookaenkelt/main (10).png";
+import bokaEnkelt11 from "../assets/Bookaenkelt/main (11).png";
+import bokaEnkelt12 from "../assets/Bookaenkelt/main (12).png";
+import bokaEnkelt13 from "../assets/Bookaenkelt/main (13).png";
+
+// Kintrol project images
+import kintrolMain from "../assets/kintrol/main.png";
+import kintrolDashboard from "../assets/kintrol/dashborad.png";
+import kintrolVDashboard from "../assets/kintrol/vdashborad.png";
+import kintrolVehicles from "../assets/kintrol/vechiles.png";
+import kintrolDrivers from "../assets/kintrol/drivers.png";
+import kintrolDefects from "../assets/kintrol/defects.png";
+import kintrolAllDefects from "../assets/kintrol/all defects.png";
+import kintrolReporting from "../assets/kintrol/reportincident.png";
+import kintrolBiweekly from "../assets/kintrol/biweekly.png";
+import kintrolPopup from "../assets/kintrol/popup.png";
+import kintrolThemeCollapse from "../assets/kintrol/theme collapse.png";
+import kintrolWhiteTheme from "../assets/kintrol/white theme.png";
 
 import {
   RiHtml5Line,
@@ -37,6 +69,58 @@ export const PROFILE = {
 export const PROJECTS = [
   {
     id: 1,
+    title: "Kintrol - Fleet Management System",
+    description:
+      "A comprehensive full-stack fleet management system built with React, TypeScript, and Supabase. Features include vehicle tracking, maintenance management, driver management, and real-time dashboards. Each vehicle has its own dedicated dashboard with tyre tracking, service tracking, diary dates, and biweekly checks. Includes QR code scanning, Excel export functionality, and theme switching (light/dark mode). Streamlined fleet operations through digital transformation with improved maintenance tracking and compliance management.",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Chart.js",
+      "Radix UI",
+    ],
+    imgSrc: kintrolMain,
+    galleryImages: [
+      kintrolMain,
+      kintrolDashboard,
+      kintrolVDashboard,
+      kintrolVehicles,
+      kintrolDrivers,
+      kintrolDefects,
+      kintrolAllDefects,
+      kintrolReporting,
+      kintrolBiweekly,
+      kintrolPopup,
+      kintrolThemeCollapse,
+      kintrolWhiteTheme,
+    ],
+  },
+  {
+    id: 2,
+    title: "BokaEnkelt Booking System",
+    description:
+      "Built a room reservation system using React.js with features like drag-and-drop booking, calendar integration, and role-based access control (RBAC) via JWT tokens. Admins manage users and rooms, while both user types can create, edit, or view reservations. Developed the backend with .NET Core APIs and SQL Server, focusing on clean architecture and optimized database queries for performance.",
+    techStack: ["React.js", ".NET Core", "SQL Server", "JWT", "RBAC"],
+    imgSrc: bokaEnkeltMain,
+    galleryImages: [
+      bokaEnkeltMain,
+      bokaEnkelt2,
+      bokaEnkelt3,
+      bokaEnkelt4,
+      bokaEnkelt5,
+      bokaEnkelt6,
+      bokaEnkelt7,
+      bokaEnkelt8,
+      bokaEnkelt9,
+      bokaEnkelt10,
+      bokaEnkelt11,
+      bokaEnkelt12,
+      bokaEnkelt13,
+    ],
+  },
+  {
+    id: 3,
     title: "Stock Spotter",
     description:
       "Boosts sales by displaying real-time stock updates and low-stock alerts on product pages. Enhances product visibility and urgency, encouraging faster purchasing decisions. Offers high customization options, allowing seamless integration with Shopify stores.",
@@ -45,7 +129,37 @@ export const PROJECTS = [
     link: "https://apps.shopify.com/display-available-stock",
   },
   {
-    id: 2,
+    id: 4,
+    title: "Doctor Appointment Booking System",
+    description:
+      "A full-stack appointment booking platform with patient, doctor, and admin roles, featuring online payments and scheduling.",
+    techStack: ["React.js", "Node.js", "Express.js", "MongoDB"],
+    imgSrc: priscripto,
+    link: "https://prescripto-frontend-alpha.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "Shopify Price Match App",
+    description:
+      "Developed a Shopify app with a theme extension for price match requests. Integrated AI-powered competitor price comparison and automated approval logic. Built an admin dashboard for managing requests, discounts, and competitor data. Implemented automatic discount application at checkout and email notifications. Ensured secure request validation to prevent duplicate submissions.",
+    techStack: [
+      "Shopify Remix",
+      "Prisma (SQLite)",
+      "Node.js",
+      "React",
+      "AI API",
+    ],
+    imgSrc: pricematchPopup,
+    galleryImages: [
+      pricematchPopup,
+      pricematchMain,
+      pricematchCompetitor,
+      pricematchReview,
+      pricematchSettings,
+    ],
+  },
+  {
+    id: 6,
     title: "Movie Finder",
     description:
       "A React-based web application that enables users to search for movies effortlessly. Fetches movie data dynamically and presents detailed information in an intuitive interface.",
@@ -54,7 +168,7 @@ export const PROJECTS = [
     link: "https://movie-finder-three-brown.vercel.app/",
   },
   {
-    id: 3,
+    id: 7,
     title: "Recipe Maker",
     description:
       "Utilizes a Hugging Face model to suggest recipes based on provided ingredients. Offers an AI-powered solution for efficient meal planning.",
@@ -63,7 +177,7 @@ export const PROJECTS = [
     link: "https://recipe-maker-xi.vercel.app/",
   },
   {
-    id: 4,
+    id: 8,
     title: "VirtualR Landing Page",
     description:
       "A sleek and modern landing page for VirtualR, a service-based platform. Showcases product offerings with a responsive and visually appealing design.",
@@ -71,25 +185,6 @@ export const PROJECTS = [
     imgSrc: virtualR,
     link: "https://virtualr-landingpage-one.vercel.app/",
   },
-  {
-    id: 1,
-    title: "Doctor Appointment Booking System",
-    description:
-      "A full-stack appointment booking platform with patient, doctor, and admin roles, featuring online payments and scheduling.",
-    techStack: ["React.js", "Node.js", "Express.js", "MongoDB"],
-    imgSrc: priscripto,
-    link: "https://prescripto-frontend-alpha.vercel.app/"
-  }
-
-  // {
-  //   id: 6,
-  //   title: "Online Learning Platform",
-  //   description:
-  //     "An e-learning platform offering video courses, quizzes, and progress tracking for students.",
-  //   techStack: ["Vue.js", "Node.js", "MongoDB", "Express"],
-  //   imgSrc: project6,
-  //   link: "https://example-learningplatform.com",
-  // },
 ];
 
 export const SKILLS = [
@@ -185,5 +280,5 @@ export const TESTIMONIAL = {
   title: "CEO, TechCorp",
   quote:
     "Working with David was a game-changer. His expertise in full-stack development helped us scale our product with ease. His attention to detail and passion for quality are unmatched.",
-  image: personImage,
+  // image: personImage,
 };

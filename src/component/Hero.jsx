@@ -85,14 +85,14 @@ const Hero = () => {
         {PROFILE.subheading}
       </p>
       <a
-        href="/Mahnoor's Resume.pdf"
+        href="/Mahnoor's cv.pdf"
         target="_blank"
         rel="noopener noreferrer"
         download
         className="hero-btn mb-6 flex gap-1 rounded-full border
       border-pink-200/50 px-3 py-2 tracking-tighter"
       >
-        <span>download Resume</span> <RiArrowRightUpLine />
+        <span>Download Resume</span> <RiArrowRightUpLine />
       </a>
       <img
         src={profileImg}

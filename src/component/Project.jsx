@@ -1,10 +1,16 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { PROJECTS } from "../constants";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Gallery from "./Gallery";
+
 gsap.registerPlugin(ScrollTrigger);
+
 const Project = () => {
   const projectsRef = useRef(null);
+  const [galleryOpen, setGalleryOpen] = useState(false);
+  const [currentProject, setCurrentProject] = useState(null);
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".project-card", {
@@ -23,6 +29,16 @@ const Project = () => {
     }, projectsRef);
     return () => ctx.revert();
   }, []);
+
+  const handleImageClick = (project) => {
+    if (project.galleryImages && project.galleryImages.length > 0) {
+      setCurrentProject(project);
+      setGalleryOpen(true);
+    } else if (project.link) {
+      window.open(project.link, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <section className="pt-16 " id="projects" ref={projectsRef}>
       <div className="px-4">
@@ -40,13 +56,16 @@ const Project = () => {
                 className="flex-grow overflow-hidden rounded-lg
                     border border-purple-300/20"
               >
-                <a href={item.link} target="_blank" rel="noopener norederrer">
+                <div 
+                  className="cursor-pointer"
+                  onClick={() => handleImageClick(item)}
+                >
                   <img
                     src={item.imgSrc}
                     alt={item.title}
-                    className="h-60 w-full object-cover"
+                    className="h-60 w-full object-cover transition-transform hover:scale-105"
                   />
-                </a>
+                </div>
                 <div className="p-6">
                   <h3 className="mb-2 text-lg font-medium lg:text-2xl">
                     {item.title}
@@ -71,6 +90,16 @@ const Project = () => {
           ))}
         </div>
       </div>
+
+      {/* Gallery Modal */}
+      {currentProject && (
+        <Gallery
+          images={currentProject.galleryImages}
+          isOpen={galleryOpen}
+          onClose={() => setGalleryOpen(false)}
+          title={currentProject.title}
+        />
+      )}
     </section>
   );
 };
