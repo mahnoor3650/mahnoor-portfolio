@@ -62,11 +62,12 @@ const Hero = () => {
   }, []);
   return (
     <section
-      className="pt-navbar flex min-h-screen flex-col items-center justify-center gap-4
+    className="pt-navbar flex min-h-screen flex-col items-center justify-center gap-4
     lg:gap-6"
+
       ref={heroRef}
     >
-      <div className="mt-8 lg:mt-20">
+      <div className="mt-4">
         <h1 className="hero-title text-4xl uppercase lg:text-7xl">
           {PROFILE.name}
         </h1>
@@ -89,18 +90,18 @@ const Hero = () => {
         target="_blank"
         rel="noopener noreferrer"
         download
-        className="hero-btn mb-6 flex gap-1 rounded-full border
+        className="hero-btn mb-2 flex gap-1 rounded-full border
       border-pink-200/50 px-3 py-2 tracking-tighter"
       >
         <span>Download Resume</span> <RiArrowRightUpLine />
       </a>
-      <img
+      {/* <img
         src={profileImg}
         alt={PROFILE.name}
         width={400}
         height="400"
         className="hero-img rounded-2xl border border-purple-300/20"
-      />
+      /> */}
     </section>
   );
 };

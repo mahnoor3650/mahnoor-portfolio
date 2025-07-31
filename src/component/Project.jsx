@@ -40,7 +40,7 @@ const Project = () => {
   };
 
   return (
-    <section className="pt-16 " id="projects" ref={projectsRef}>
+    <section className="pt-6 " id="projects" ref={projectsRef}>
       <div className="px-4">
         <h2 className="mb-8 text-center text-3xl font-medium lg:text-4xl ">
           Projects

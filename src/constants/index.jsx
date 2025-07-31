@@ -63,7 +63,7 @@ export const PROFILE = {
   name: "Mahnoor Khalid",
   role: "Full Stack Web Developer",
   subheading:
-    "With 2 years of full-stack development experience, I build efficient, scalable web applications. Not on the job hunt, but always curious about interesting projects.",
+    "With more than 2 years of full-stack development experience, I build efficient, scalable web applications. Not on the job hunt, but always curious about interesting projects.",
 };
 
 export const PROJECTS = [
@@ -255,30 +255,7 @@ export const EDUCATION = [
     institution: "International Islamic University Islamabad",
     duration: "2018 - 2022",
     description:
-      "Graduated with Bachelor in Software Engineering, focusing on algorithms, data structures, and web development. Completed a capstone project on scalable cloud architectures.",
+      "Graduated with Bachelor in Software Engineering, focusing on algorithms, data structures, and web development.",
   },
-  // {
-  //   id: 2,
-  //   degree: "Master of Science in Software Engineering",
-  //   institution: "MIT",
-  //   duration: "2016 - 2018",
-  //   description:
-  //     "Focused on advanced software engineering concepts, system design, and AI technologies. Completed a thesis on machine learning applications in real-time data processing.",
-  // },
-  // {
-  //   id: 3,
-  //   degree: "Certified React Developer",
-  //   institution: "Udacity Nanodegree",
-  //   duration: "2019",
-  //   description:
-  //     "Earned a certification in advanced React.js development, including hooks, context API, and performance optimization.",
-  // },
 ];
 
-export const TESTIMONIAL = {
-  name: "Sarah Doe",
-  title: "CEO, TechCorp",
-  quote:
-    "Working with David was a game-changer. His expertise in full-stack development helped us scale our product with ease. His attention to detail and passion for quality are unmatched.",
-  // image: personImage,
-};
