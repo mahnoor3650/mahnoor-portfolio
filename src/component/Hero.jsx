@@ -86,7 +86,7 @@ const Hero = () => {
         {PROFILE.subheading}
       </p>
       <a
-        href="/Mahnoor's cv.pdf"
+        href="/cv.pdf"
         target="_blank"
         rel="noopener noreferrer"
         download
